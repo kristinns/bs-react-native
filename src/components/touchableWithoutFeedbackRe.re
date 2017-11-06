@@ -10,6 +10,7 @@ let make
     ::disabled=?
     ::hitSlop=?
     ::onLayout=?
+    ::onLongPress=?
     ::onPress=?
     ::onPressIn=?
     ::onPressOut=?
@@ -26,6 +27,7 @@ let make
           "disabled": from_opt (UtilsRN.optBoolToOptJsBoolean disabled),
           "hitSlop": from_opt hitSlop,
           "onLayout": from_opt onLayout,
+          "onLongPress": from_opt onLongPress,
           "onPress": from_opt onPress,
           "onPressIn": from_opt onPressIn,
           "onPressOut": from_opt onPressOut,
