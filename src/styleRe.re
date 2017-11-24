@@ -502,6 +502,8 @@ let fontFamily = stringStyle "fontFamily";
 
 let fontSize = floatStyle "fontSize";
 
+let fontSizeAnimated = animatedStyle "fontSize";
+
 let fontStyle v =>
   stringStyle
     "fontStyle"

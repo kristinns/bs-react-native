@@ -268,6 +268,8 @@ let fontFamily: string => style;
 
 let fontSize: float => style;
 
+let fontSizeAnimated: AnimatedRe.Value.t => style;
+
 let fontStyle: [ | `normal | `italic] => style;
 
 let fontWeight:
