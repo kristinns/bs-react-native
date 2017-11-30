@@ -1,5 +1,6 @@
 let make:
   accessible::bool? =>
+  accessibilityLabel::string? =>
   accessibilityComponentType::[ | `none | `button | `radiobutton_checked | `radiobutton_unchecked]? =>
   accessibilityTraits::
     list [
