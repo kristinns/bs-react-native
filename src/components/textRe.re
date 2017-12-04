@@ -1,5 +1,6 @@
 module type TextComponent = {
   let make:
+    accessibilityLabel::string? =>
     accessible::bool? =>
     allowFontScaling::bool? =>
     ellipsizeMode::[ | `clip | `head | `middle | `tail]? =>
@@ -23,6 +24,7 @@ module type TextComponent = {
 
 module CreateComponent (Impl: ViewRe.Impl) :TextComponent => {
   let make
+      ::accessibilityLabel=?
       ::accessible=?
       ::allowFontScaling=?
       ::ellipsizeMode=?
@@ -46,6 +48,7 @@ module CreateComponent (Impl: ViewRe.Impl) :TextComponent => {
       props::
         Js.Undefined.(
           {
+            "accessibilityLabel": from_opt accessibilityLabel,
             "accessible": from_opt (UtilsRN.optBoolToOptJsBoolean accessible),
             "allowFontScaling": from_opt (UtilsRN.optBoolToOptJsBoolean allowFontScaling),
             "ellipsizeMode":

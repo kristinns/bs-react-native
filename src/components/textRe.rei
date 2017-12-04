@@ -1,5 +1,6 @@
 module type TextComponent = {
   let make:
+    accessibilityLabel::string? =>
     accessible::bool? =>
     allowFontScaling::bool? =>
     ellipsizeMode::[ | `clip | `head | `middle | `tail]? =>
